@@ -1,5 +1,6 @@
 plugins {
     id "java-library"
+    id "maven-publish"  // Add this
     id "edu.wpi.first.GradleRIO" version "2025.3.1"
 }
 
@@ -11,9 +12,17 @@ repositories {
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
+    withSourcesJar()
 }
 
-// Dependencies
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']  // Add this to find your source files
+        }
+    }
+}
+
 dependencies {
     api wpi.java.deps.wpilib()
     api wpi.java.vendor.java()
@@ -22,12 +31,18 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
-test {
-    useJUnitPlatform()
-    systemProperty 'junit.jupiter.extensions.autodetection.enabled', 'true'
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
 }
 
-// Configure string concat to always inline compile
+test {
+    useJUnitPlatform()
+}
+
 tasks.withType(JavaCompile) {
     options.compilerArgs.add '-XDstringConcat=inline'
 }

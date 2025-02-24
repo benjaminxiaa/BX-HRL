@@ -16,7 +16,8 @@ import com.ctre.phoenix6.hardware.TalonFX;
 import com.ctre.phoenix6.signals.InvertedValue;
 import com.ctre.phoenix6.signals.NeutralModeValue;
 import edu.wpi.first.wpilibj.DriverStation;
-import frc.robot.Constants;
+import harkerrobolib.util.Constants;
+import harkerrobolib.util.PIDConfig;
 
 public class HSTalonFX implements AutoCloseable {
     private static final double kCANTimeoutS = 0.1; // s
