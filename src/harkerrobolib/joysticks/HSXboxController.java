@@ -14,115 +14,35 @@ public class HSXboxController extends CommandXboxController {
     super(port);
   }
 
-  public Trigger getButtonA() {
-    return super.a();
-  }
-
-  public Trigger getButtonB() {
-    return super.b();
-  }
-
-  public Trigger getButtonX() {
-    return super.x();
-  }
-
-  public Trigger getButtonY() {
-    return super.y();
-  }
-
-  public Trigger getRightBumper() {
-    return super.rightBumper();
-  }
-
-  public Trigger getLeftBumper() {
-    return super.leftBumper();
-  }
-
-  public Trigger getButtonStart() {
-    return super.start();
-  }
-
-  public Trigger getButtonSelect() {
-    return super.back();
-  }
-
-  public double getRightTrigger() {
-    return super.getRightTriggerAxis();
-  }
-
-  public double getLeftTrigger() {
-    return super.getLeftTriggerAxis();
-  }
-
-  public double getRightY() {
-    return -super.getRightY();
-  }
-
-  public double getLeftY() {
-    return -super.getLeftY();
-  }
-
-  public Trigger getUpDPadButton() {
+  public Trigger getUpDPad() {
     return super.povUp();
   }
 
-  public Trigger getDownDPadButton() {
+  public Trigger getDownDPad() {
     return super.povDown();
   }
 
-  public Trigger getLeftDPadButton() {
+  public Trigger getLeftDPad() {
     return super.povLeft();
   }
 
-  public Trigger getRightDPadButton() {
+  public Trigger getRightDPad() {
     return super.povRight();
   }
 
-  public boolean getButtonAState() {
-    return getButtonA().getAsBoolean();
-  }
-
-  public boolean getButtonBState() {
-    return getButtonB().getAsBoolean();
-  }
-
-  public boolean getButtonXState() {
-    return getButtonX().getAsBoolean();
-  }
-
-  public boolean getButtonYState() {
-    return getButtonY().getAsBoolean();
-  }
-
-  public boolean getButtonStartState() {
-    return getButtonStart().getAsBoolean();
-  }
-
-  public boolean getButtonSelectState() {
-    return getButtonSelect().getAsBoolean();
-  }
-
-  public boolean getLeftBumperState() {
-    return getLeftBumper().getAsBoolean();
-  }
-
-  public boolean getRightBumperState() {
-    return getRightBumper().getAsBoolean();
-  }
-
-  public boolean getUpDPadButtonState() {
+  public boolean getUpDPadState() {
     return super.getHID().getPOV() == 0;
   }
 
-  public boolean getDownDPadButtonState() {
+  public boolean getDownDPadState() {
     return super.getHID().getPOV() == 180;
   }
 
-  public boolean getLeftDPadButtonState() {
+  public boolean getLeftDPadState() {
     return super.getHID().getPOV() == 270;
   }
 
-  public boolean getRightDPadButtonState() {
+  public boolean getRightDPadState() {
     return super.getHID().getPOV() == 90;
   }
 }
