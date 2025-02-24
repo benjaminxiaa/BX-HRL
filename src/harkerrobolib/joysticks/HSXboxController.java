@@ -9,8 +9,8 @@ import edu.wpi.first.wpilibj2.command.button.Trigger;
  * @author Benjamin Xia
  * @version 02/23/25
  */
-public class XboxGamepad extends CommandXboxController {
-  public XboxGamepad(int port) {
+public class HSXboxController extends CommandXboxController {
+  public HSXboxController(int port) {
     super(port);
   }
 
