@@ -1,4 +1,4 @@
-package frc.robot.util;
+package harkerrobolib.util;
 
 /** Defines a ratio and distance per rotation between motor and mechanism. */
 public class MechanismRatio {

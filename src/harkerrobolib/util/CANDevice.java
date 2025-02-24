@@ -1,4 +1,4 @@
-package frc.robot.util;
+package harkerrobolib.util;
 
 public class CANDevice {
   public static final String kRIOCANbusName = "rio";
