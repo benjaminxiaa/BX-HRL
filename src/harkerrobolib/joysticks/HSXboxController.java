@@ -14,6 +14,14 @@ public class HSXboxController extends CommandXboxController {
     super(port);
   }
 
+  public Trigger getHomeButton() {
+    return super.button(7);
+  }
+
+  public Trigger getMenuButton() {
+    return super.button(8);
+  }
+
   public Trigger getUpDPad() {
     return super.povUp();
   }
